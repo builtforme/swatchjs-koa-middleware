@@ -47,19 +47,14 @@
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.7.0",
-    "koa": "^2.3.0",
     "mocha": "^3.5.0",
     "mocha-eslint": "^4.1.0",
-    "mute": "^2.0.6",
     "nyc": "^11.1.0",
-    "sinon": "^3.2.0",
     "supertest": "^3.0.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.25.0",
-    "bunyan": "^1.8.10",
-    "koa-router": "^7.2.1",
     "swatchjs": "^3.1.0"
   },
   "files": [
