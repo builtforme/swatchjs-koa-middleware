@@ -3,6 +3,6 @@ const swatchKoaMiddleware = require('..');
 
 describe('index', () => {
   it('should be an object that contains helper methods', () => {
-    expect(swatchKoaMiddleware).to.deep.equal({});
+    expect(Object.keys(swatchKoaMiddleware)).to.deep.equal(['methods']);
   });
 });
