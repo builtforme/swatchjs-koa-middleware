@@ -1,0 +1,63 @@
+{
+  "name": "swatchjs-koa-middleware",
+  "version": "0.0.1",
+  "description": "Middleware for swatchjs KOA packages",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "nyc mocha --opts test/unit/mocha.opts 'test/**/*.test.js'",
+    "test:debug": "mocha --debug-brk",
+    "lint": "./node_modules/.bin/eslint --ext .js index.js lib/**/*.js test/**/*.js",
+    "build": "babel . -d dist --ignore coverage,dist,node_modules",
+    "clean": "rm -rf dist/",
+    "coveralls": "nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js",
+    "codecov": "nyc report --reporter=lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builtforme/swatchjs-koa-middleware.git"
+  },
+  "keywords": [
+    "swatchjs",
+    "koa",
+    "methods",
+    "api",
+    "framework"
+  ],
+  "author": "Built For Me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/builtforme/swatchjs-koa-middleware/issues"
+  },
+  "homepage": "https://github.com/builtforme/swatchjs-koa-middleware#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-mod": "^6.6.0",
+    "babel-preset-es3": "^1.0.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
+    "codecov": "^2.3.0",
+    "coveralls": "^2.13.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.0",
+    "mocha-eslint": "^4.1.0",
+    "nyc": "^11.1.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-runtime": "^6.25.0",
+    "bunyan": "^1.8.10"
+  },
+  "files": [
+    "dist"
+  ]
+}
