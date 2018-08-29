@@ -1,6 +1,6 @@
 {
   "name": "swatchjs-koa-middleware",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Middleware for swatchjs KOA packages",
   "main": "dist/index.js",
   "scripts": {
