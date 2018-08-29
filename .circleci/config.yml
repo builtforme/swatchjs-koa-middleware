@@ -42,9 +42,8 @@ jobs:
   bump_version:
     <<: *defaults
     steps:
-      # We have to use 'checkout' in order to get github's info injected into
-      # ~/.ssh/known_hosts.  We overwrite the checkout with the information from
-      # the workspace.
+      # We have to 'checkout' to get github's info into ~/.ssh/known_hosts
+      # We overwrite the checkout with the information from the workspace
       - checkout
       - attach_workspace: { at: . }
       - run: |
@@ -52,6 +51,8 @@ jobs:
             git config --global user.name "Built For Me Automation"
             git config --global user.email "automation@builtforme.tech"
       - run: npm version patch --message "bump version to %s [ci skip]"
+      # SSH private key for BFM Automation user must be added to CircleCI project
+      # Fingerprint allows CircleCI to load SSH key with write access to Github repo
       - add_ssh_keys:
           fingerprints:
             - "a3:7d:73:b8:70:cc:6d:aa:6a:e7:3e:08:33:7b:69:f9"
