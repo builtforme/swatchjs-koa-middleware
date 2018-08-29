@@ -68,6 +68,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace: { at: . }
+      - run: npm run build
       - run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
           npm publish --access public
