@@ -1,9 +1,7 @@
 const bunyan = require('bunyan');
-const chai = require('chai');
+const { expect } = require('chai');
 
 const logger = require('../../lib/logger');
-
-const expect = chai.expect;
 
 describe('logger', () => {
   it('should use the provided logger', (done) => {
